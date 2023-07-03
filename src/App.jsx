@@ -67,9 +67,9 @@ function App() {
           </Link>
           </div>
           <div className='footer-accounts'>
-            <p>Facebook</p>
-            <p>LinkedIn</p>
-            <p>Github</p>
+            <a href='https://www.linkedin.com/in/laurence-santos-478a8a258/' target="_blank"><img className='icons' src='linkedin icon.png' alt='linkedin icon'></img></a>
+            <a href='https://github.com/Lau-rence' target="_blank"><img className='icons' src='github icon2.png' alt='github icon'></img></a>
+            <a href='https://www.facebook.com/Lorensssssssssssss' target="_blank"><img className='icons' src='facebook icon.png' alt='facebook icon'></img></a>
           </div>
         </div>
       </>
