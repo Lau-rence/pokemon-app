@@ -53,7 +53,25 @@ function App() {
           <Route path='/About' element={<About />} />
           <Route path='/ContactUs' element={<ContactUs />} />
         </Routes>
-        <div className='footer'></div>
+        <div className='footer'>
+          <div className='footer-author'>
+            <p>© LAURENCE - 2023</p>
+          </div>
+          <div className='footer-connect'>
+          <p className='connect'>Connect with us: </p>
+          <Link
+            to="/ContactUs"
+            onClick={() => setActiveItem('contactus')}
+            className='here'>
+            here
+          </Link>
+          </div>
+          <div className='footer-accounts'>
+            <p>Facebook</p>
+            <p>LinkedIn</p>
+            <p>Github</p>
+          </div>
+        </div>
       </>
     </BrowserRouter>
   );
