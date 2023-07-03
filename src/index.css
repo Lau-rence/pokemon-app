@@ -1,0 +1,9 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 100%; /* Ensure the root element takes up the full width */
+  padding: 0;
+  background-image: linear-gradient(to bottom, #19224f, #e27e94, #fcd6c3);
+  background-repeat: no-repeat;
+  background-size: 370%;
+  /* Additional styling if needed */
+}

@@ -1,0 +1,78 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #19224f;
+    position: sticky;
+    top: 0;
+    height: max-content;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    box-shadow: 0 1px 5px black;
+}
+
+.pokeball-container{
+    margin-left: 3rem;
+}
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+.pokeball {
+    height: 75px;
+    width: 75px;
+    animation: rotateAnimation 2s linear infinite;
+}
+
+.logoImage {
+    height: 75px;
+    width: 200px;
+}
+.navigation {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 22px;
+}
+
+.navigation li {
+    display: flex;
+    justify-content: center;
+    margin-right: 3rem;
+}
+
+.navigation-item{
+    text-decoration: none;
+    color: white;
+}
+
+.navigation-item:hover{
+    text-decoration: none;
+    color: #e27e94;
+}
+
+.navigation-item-active{
+    text-decoration: none;
+    color: #e27e94;
+}
+
+.footer {
+    background-color: #19224f;
+    height: 150px;
+    box-shadow: 0 1px 10px black;
+}
+
+
+@keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
