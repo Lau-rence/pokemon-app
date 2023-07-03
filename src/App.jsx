@@ -55,7 +55,7 @@ function App() {
         </Routes>
         <div className='footer'>
           <div className='footer-author'>
-            <p>© LAURENCE - 2023</p>
+            <p>© Laurence - 2023</p>
           </div>
           <div className='footer-connect'>
           <p className='connect'>Connect with us: </p>
