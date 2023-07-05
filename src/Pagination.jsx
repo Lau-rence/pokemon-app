@@ -5,19 +5,41 @@ import './Pagination.css'
 
 export default function Pagination(){
   const [pokemon, setPokemon] = useState([])
+  const [currentPage, setCurrentPage] = useState('https://pokeapi.co/api/v2/pokemon');
+  const [nextPage, setNextPage] = useState();
+  const [previousPage, setPreviousPage] = useState();
+  const [loading, setLoading] = useState(true);
 
   useEffect(()=>{
-    axios.get('https://pokeapi.co/api/v2/pokemon').then((res)=>{
+    setLoading(true);
+    let cancel;
+    axios.get(currentPage, {
+      cancelToken: new axios.CancelToken(c => cancel = c)
+    }).then((res)=>{
+        setLoading(false);
+        setNextPage(res.data.next);
+        setPreviousPage(res.data.previous);
+        console.log(res.data.previous)
         setPokemon(res.data.results);
-    }, [])
-  })
+    })
+    return () => cancel();
+  }, [currentPage])
 
+  function goToNextPage(){
+    setCurrentPage(nextPage);
+  }
+
+  function goToPreviousPage(){
+    setCurrentPage(previousPage);
+  }
+
+if(loading) return (<div className='loading'><img className='pokeball' src='pokeball.png' alt='pokeball'></img></div>)
 return (
     <>
       <PokemonList pokemon={pokemon} />
       <div className='btn-container'>
-        <button>Previous</button>
-        <button>Next</button>
+        {previousPage && <button onClick={()=>goToPreviousPage()}>Previous</button>}
+        {nextPage && <button onClick={()=>goToNextPage()}>Next</button>}
       </div>
     </>
 )

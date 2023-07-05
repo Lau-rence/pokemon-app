@@ -31,6 +31,7 @@ flex-direction: column;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 .evolution-items{
     height: 100%;

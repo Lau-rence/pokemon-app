@@ -4,11 +4,14 @@ import './Information.css';
 export default function Information({open, onClose, pokemon}){
     const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon/');
     const [evolution, setEvolution] = useState([]);
+    const [loading, setLoading] = useState(false)
     useEffect(()=>{
         if(open=true){
+        setLoading(true)
         axios.get(url+pokemon).then((res)=>{
             axios.get(res.data.species.url).then((res)=>{
                 axios.get(res.data.evolution_chain.url).then((res)=>{
+                    setLoading(false)
                     const newEvolution = [...evolution, 
                         res.data.chain.species.name, 
                         res.data.chain.evolves_to[0].species.name
@@ -33,16 +36,20 @@ return (
             <div>
                 <img className='pokemon-logo' src='Pokemon logo.png' alt='pokemon logo'></img>
             </div>
+            
             <div className='evolution-container'>
-            {evolution.map((ev)=>(
+            {loading? <div className='loading'><img className='pokeball' src='pokeball.png' alt='pokeball'></img></div>
+            :
+            evolution.map((ev)=>(
             <div className='evolution-items'>
             <div className='name'><label>{capitalizeFirstLetter(ev)}</label></div>
             <div className='image-container'><img className='image' src={ev + '.png'} alt={ev+ ' image'} /></div>
             </div>
             ))}
-            </div>   
+            </div> 
             <div className='button-container'><button onClick={()=> {
                 onClose();
+                setLoading(false)
                 setEvolution([])
             }} className='pokemon-button-close'>Close</button></div>
         </div>

@@ -14,7 +14,6 @@ function App() {
     <BrowserRouter> {/* Wrap the App component with BrowserRouter */}
       <>
         <nav className='navbar'>
-          <div className='pokeball-container'><img className='pokeball' src='pokeball.png' alt='pokeball'></img></div>
           <div className='logo'>
             <img className='logoImage' src="Pokemon logo.png" alt="Pokemon logo" />
           </div>
@@ -58,12 +57,12 @@ function App() {
             <p>© Laurence - 2023</p>
           </div>
           <div className='footer-connect'>
-          <p className='connect'>Connect with us: </p>
+          <p className='connect'>Connect with us through: </p>
           <Link
             to="/ContactUs"
             onClick={() => setActiveItem('contactus')}
             className='here'>
-            here
+            email
           </Link>
           </div>
           <div className='footer-accounts'>
