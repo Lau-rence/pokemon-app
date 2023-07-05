@@ -1,3 +1,33 @@
+.search {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.search-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: #19224f;
+    box-shadow: 0 2.5px 4px black;
+    border-radius: 10px;
+}
+.search-icon{
+    height: 30px;
+    width: 30px;
+}
+.searchbar {
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 400px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 2.5px 4px black;
+}
+
 .btn-container {
     display: flex;
     justify-content: center;

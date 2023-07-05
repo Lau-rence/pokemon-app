@@ -36,6 +36,10 @@ export default function Pagination(){
 if(loading) return (<div className='loading'><img className='pokeball' src='pokeball.png' alt='pokeball'></img></div>)
 return (
     <>
+      <div className='search'>
+        <div className='search-icon-container'><img className='search-icon' src='search.png' alt='search icon'></img></div>
+        <input className='searchbar'type='text' placeholder='Search...'></input>
+      </div> 
       <PokemonList pokemon={pokemon} />
       <div className='btn-container'>
         {previousPage && <button onClick={()=>goToPreviousPage()}>Previous</button>}
