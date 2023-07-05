@@ -15,7 +15,7 @@ function App() {
       <>
         <nav className='navbar'>
           <div className='logo'>
-            <img className='logoImage' src="Pokemon logo.png" alt="Pokemon logo" />
+            <img className='logoImage' src="Pokemon logo.png" alt="Pokemon logo" width={200} height={75}/>
           </div>
           <div className='navigation'>
             <li>

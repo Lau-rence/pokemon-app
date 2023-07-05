@@ -25,8 +25,8 @@
 }
 
 .logoImage {
-    height: 75px;
-    width: 200px;
+    height: auto;
+    max-width: 100%;
 }
 .navigation {
     list-style: none;
@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 22px;
+    font-size: 1rem;
 }
 
 .navigation li {
@@ -120,3 +120,8 @@
       transform: rotate(360deg);
     }
   }
+@media only screen and (min-width: 600px){
+    .navigation{
+        font-size: 1.4rem;
+    }
+}
