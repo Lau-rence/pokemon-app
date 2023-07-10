@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .mobile-menu{
@@ -46,11 +46,11 @@
     list-style-type: none;
     padding: 0px;
     margin-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 .mobile-menu li{
     width: 100%;
     display: flex;
-    justify-content: center;
     margin: 0px;
 }
 
@@ -76,22 +76,30 @@
   }
 
 .navigation-item{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: white;
     width: 100%;
 }
 
 .navigation-item:hover{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: #e27e94;
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
 
 .navigation-item-active{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: #e27e94;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
+    border-radius: 20px;
 }
 
 .footer {
