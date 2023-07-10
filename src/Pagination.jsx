@@ -19,7 +19,6 @@ export default function Pagination(){
         setLoading(false);
         setNextPage(res.data.next);
         setPreviousPage(res.data.previous);
-        console.log(res.data.previous)
         setPokemon(res.data.results);
     })
     return () => cancel();

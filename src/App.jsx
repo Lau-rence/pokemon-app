@@ -9,42 +9,108 @@ import './App.css'
 
 function App() {
   const [activeItem, setActiveItem] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(()=> {
+    if(isMenuOpen){
+      document.getElementById('navbar').className = 'navbar column';
+    }
+    else{
+      document.getElementById('navbar').className = 'navbar';
+    }
+  },[isMenuOpen])
   return (
     <BrowserRouter> {/* Wrap the App component with BrowserRouter */}
       <>
-        <nav className='navbar'>
+        <nav id='navbar'>
           <div className='logo'>
             <img className='logoImage' src="Pokemon logo.png" alt="Pokemon logo" width={200} height={75}/>
           </div>
-          <div className='navigation'>
-            <li>
-              <Link
-                to="/"
-                className={activeItem === 'home' ? 'navigation-item-active' : 'navigation-item'}
-                onClick={() => setActiveItem('home')}
-              >
-                Pokemon List
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/About"
-                className={activeItem === 'about' ? 'navigation-item-active' : 'navigation-item'}
-                onClick={() => setActiveItem('about')}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/ContactUs"
-                className={activeItem === 'contactus' ? 'navigation-item-active' : 'navigation-item'}
-                onClick={() => setActiveItem('contactus')}
-              >
-                Contact us
-              </Link>
-            </li>
+          <div id='navigation' className='navigation'>
+            {isMenuOpen ? (
+              <ul className='mobile-menu'>
+                <li>
+                  <Link
+                    to="/"
+                    className={activeItem === 'home' ? 'navigation-item-active' : 'navigation-item'}
+                    onClick={() => {
+                      setActiveItem('home');
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    Pokemon List
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/About"
+                    className={activeItem === 'about' ? 'navigation-item-active' : 'navigation-item'}
+                    onClick={() => {
+                      setActiveItem('about');
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/ContactUs"
+                    className={activeItem === 'contactus' ? 'navigation-item-active' : 'navigation-item'}
+                    onClick={() => {
+                      setActiveItem('contactus');
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    Contact us
+                  </Link>
+                </li>
+              </ul>
+            ) : (
+              <div className='burger-menu' onClick={() => setIsMenuOpen(true)}>
+                <div className='burger-line'></div>
+                <div className='burger-line'></div>
+                <div className='burger-line'></div>
+              </div>
+            )}
+            <div className='desktop-menu'>
+              <li>
+                <Link
+                  to="/"
+                  className={activeItem === 'home' ? 'navigation-item-active' : 'navigation-item'}
+                  onClick={() => {
+                    setActiveItem('home');
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Pokemon List
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/About"
+                  className={activeItem === 'about' ? 'navigation-item-active' : 'navigation-item'}
+                  onClick={() => {
+                    setActiveItem('about');
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ContactUs"
+                  className={activeItem === 'contactus' ? 'navigation-item-active' : 'navigation-item'}
+                  onClick={() => {
+                    setActiveItem('contactus');
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Contact us
+                </Link>
+              </li>
+            </div>
           </div>
         </nav>
         <Routes>
