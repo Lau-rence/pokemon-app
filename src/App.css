@@ -9,7 +9,6 @@
     padding-bottom: 8px;
     padding-top: 8px;
     box-shadow: 0 1px 5px black;
-    
 }
 
 .column {
@@ -18,8 +17,8 @@
 
 .logo {
     display: flex;
-    justify-content: center;
     width: 100%;
+    padding-left: 2rem;
 }
 
 .pokeball {
@@ -32,6 +31,23 @@
     height: auto;
     max-width: 100%;
 }
+
+.closing-icon{
+    display: flex;
+    color: white;
+    justify-content: end;
+}
+.closing-icon p{
+    margin: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.closing-icon p:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+
 .navigation {
     list-style: none;
     width: 100%;
@@ -44,7 +60,8 @@
 .mobile-menu{
     width: 100%;
     list-style-type: none;
-    padding: 0px;
+    padding-bottom: 20px;
+    padding-left: 0px;
     margin-bottom: 0px;
     background-color: rgba(255, 255, 255, 0.2); 
 }
@@ -80,6 +97,8 @@
     justify-content: center;
     text-decoration: none;
     color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 100%;
 }
 
@@ -89,7 +108,7 @@
     text-decoration: none;
     color: #e27e94;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .navigation-item-active{
@@ -99,6 +118,8 @@
     color: #e27e94;
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 20px;
 }
 
@@ -119,7 +140,7 @@
 }
 
 .footer-author {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .footer-connect {
@@ -130,7 +151,7 @@
 
 }
 .connect {
-    font-size: 20px;
+    font-size: 14px;
     text-decoration: none;
     margin: 0px;
     display: flex;
@@ -138,7 +159,7 @@
 }
 
 .here {
-    font-size: 18px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -169,10 +190,6 @@
         flex-direction: row;
     }
 
-    .logo {
-        padding-left: 2rem;
-        justify-content: flex-start;
-    }
     .burger-menu {
         display: none;
     }
@@ -216,10 +233,25 @@
         color: #e27e94;
         background-color: transparent;
     }
+    .footer-author {
+        font-size: 14px;
+    }
+    .connect{
+        font-size: 18px;
+    }
+    .here{
+        font-size: 16px;
+    }
 }
 
 @media only screen and (min-width: 992px){
     .navigation {
         font-size: 1.4rem;
+    }
+    .connect{
+        font-size: 20px;
+    }
+    .here{
+        font-size: 18px;
     }
 }

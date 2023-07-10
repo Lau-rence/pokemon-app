@@ -23,12 +23,13 @@ function App() {
     <BrowserRouter> {/* Wrap the App component with BrowserRouter */}
       <>
         <nav id='navbar'>
-          <div className='logo'>
+          <div id='logo' className='logo'>
             <img className='logoImage' src="Pokemon logo.png" alt="Pokemon logo" width={200} height={75}/>
           </div>
           <div id='navigation' className='navigation'>
             {isMenuOpen ? (
               <ul className='mobile-menu'>
+                <div className='closing-icon'><p onClick={()=>setIsMenuOpen(false)}>x</p></div>
                 <li>
                   <Link
                     to="/"

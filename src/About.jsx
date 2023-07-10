@@ -9,10 +9,13 @@ return(
             <h1>API used:</h1>
             <h2>This web application is using the <a href='https://pokeapi.co/' target='_blank'>https://pokeapi.co/</a> or the PokéAPI to easily get the pokémons and all the information about it.</h2>
             <hr style={{borderColor: 'black', border: 'solid 1px'}} />
-            <h1>Framework used:</h1>
+            <h1>Framework and libraries used:</h1>
             <h2>
                 <li>React.js</li>
                 <li>Vite</li>
+                <li>Axios</li>
+                <li>Vanilla CSS</li>
+                <li>Nodemailer</li>
             </h2>
             <hr style={{borderColor: 'black', border: 'solid 1px'}} />
             <h1>Developer:</h1>
