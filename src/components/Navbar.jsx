@@ -82,7 +82,7 @@ export default function Navbar(){
                 </li>
                 <li>
                 <Link
-                    to="/About"
+                    to="/about"
                     className={activeItem === 'about' ? 'navigation-item-active' : 'navigation-item'}
                     onClick={() => {
                     setActiveItem('about');
@@ -94,7 +94,7 @@ export default function Navbar(){
                 </li>
                 <li>
                 <Link
-                    to="/ContactUs"
+                    to="/contactus"
                     className={activeItem === 'contactus' ? 'navigation-item-active' : 'navigation-item'}
                     onClick={() => {
                     setActiveItem('contactus');
