@@ -1,4 +1,4 @@
-import {useState } from "react"
+import { useState } from "react"
 import './PokemonList.css'
 import Information from "./Information"
 export default function PokemonList({pokemon}){

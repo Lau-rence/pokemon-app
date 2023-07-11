@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import PokemonList from './PokemonList'
+import PokemonList from '../components/PokemonList'
 import axios from 'axios'
-import './Pagination.css'
+import './Pokemons.css'
 
-export default function Pagination(){
+export default function Pokemons(){
   const [pokemon, setPokemon] = useState([])
   const [currentPage, setCurrentPage] = useState('https://pokeapi.co/api/v2/pokemon');
   const [nextPage, setNextPage] = useState();
