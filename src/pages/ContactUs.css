@@ -1,0 +1,44 @@
+.contactus-bg {
+    background-image: linear-gradient(to right, #19224f, transparent ),url('pokemon-bg2.jpg');
+    background-size: cover;
+    height: max-content;
+    margin: 0px;
+    padding: 30px;
+    color: #e27e94;
+}
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactus-bg h1{
+    margin: 0px;
+}
+
+.contactus-bg label{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.contactus-bg input{
+    margin-left: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+}
+.contactus-bg textarea{
+    margin-left: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 600px;
+    height: 100px;
+}
+
+.contactus-container{
+    padding: 30px;
+    display: flex;
+    width: max-content;
+    height: max-content;
+    align-content: center;
+}
