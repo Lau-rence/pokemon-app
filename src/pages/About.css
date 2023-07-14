@@ -1,4 +1,70 @@
-.about{
-    margin-left: 20px;
-    margin-right: 20px;
+.about-bg {
+    width: 100%;
+    background-image: linear-gradient( to right, #19224f, transparent),url(pokemon-bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: max-content;
+    color: #e27e94;
+    padding-left: 1px;
+    padding-right: 1px;
 }
+
+.about-bg h1 {
+    margin: 0px;
+    font-size: medium;
+}
+.about p {
+    font-family: Oswald;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: small;
+    text-align: justify;
+}
+
+.container-about {
+    padding: 30px
+
+}
+.empty {
+    width: 100%;
+}
+.box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: #e27e94 1px solid;
+    border-radius: 20px;
+    height: max-content;
+    padding: 30px;
+}
+.box div {
+    width: 100%;
+}
+
+.logos {
+    height: 20px;
+    width: auto;
+    padding: 0px;
+    margin-right: 5px;
+}
+
+@media only screen and (min-width: 1000px){
+    .container-about{
+        width: 70%;
+    }
+    .empty {
+        width: 30%;
+    }
+    .about-bg h1 {
+        font-size: large;
+    }
+    .about p {
+        font-size: medium;
+    }
+    .box {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
