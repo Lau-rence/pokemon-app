@@ -21,17 +21,23 @@
 
 .contactus-bg input{
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 15px;
+    font-family: system-ui;
     border-radius: 10px;
     width: 300px;
     height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .contactus-bg textarea{
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 15px;
+    font-family: system-ui;
     border-radius: 10px;
-    width: 600px;
+    width: 700px;
     height: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .contactus-container{
@@ -40,4 +46,19 @@
     width: max-content;
     height: max-content;
     align-content: center;
+}
+
+.contactus-container button {
+    height: 3rem;
+    width: 10rem;
+    background-color: #19224f;
+    color: white;
+    font-size: 24px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
 }

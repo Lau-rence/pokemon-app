@@ -46,6 +46,7 @@
     margin-right: 5px;
     border: 0px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .loading {
