@@ -2,7 +2,7 @@ import './ContactUs.css'
 export default function ContactUs () {
     return(
         <div className="contactus">
-            <div className="contactus-bg">
+            <div className="contactus-bg" style={{backgroundImage: url('pokemon-bg2.jpg')}}>
                 <h1>Hello there...</h1>
                 <div className='message'>
                     <div className='contactus-container'>
