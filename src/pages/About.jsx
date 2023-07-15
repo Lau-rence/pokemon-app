@@ -29,7 +29,7 @@ export default function About () {
 return(
     <>
         <div className="about">
-            <div className='about-bg'>
+            <div className='about-bg' style={{backgroundImage: `linear-gradient( to right, #19224f, transparent) , url('pokemon-bg1.png')`}}>
                 <div className='container-about'>
                     <div className='box'>
                         <h1>Pokémon Application</h1>
