@@ -1,5 +1,5 @@
 .contactus-bg {
-    background-image: linear-gradient(to right, #19224f, transparent ),url('pokemon-bg2.jpg');
+    background-image: url('pokemon-bg2.jpg');
     background-size: cover;
     height: max-content;
     margin: 0px;
