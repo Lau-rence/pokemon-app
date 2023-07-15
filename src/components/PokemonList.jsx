@@ -16,7 +16,7 @@ return(
             setOpenInfo(true);
             setPokemonName(p.name);
             }}>
-            <img className='pokemon-image'src={p.name + '.png'} alt={p.name + ' image'} />
+            <img className='pokemon-image'src={'./pokemons/'+ p.name + '.png'} alt={p.name + ' image'} />
             <div className="pokemon-name">
             <label key={p.name}>{capitalizeFirstLetter(p.name)}</label>
             </div>

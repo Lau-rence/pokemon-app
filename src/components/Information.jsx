@@ -43,7 +43,7 @@ return (
             evolution.map((ev)=>(
             <div className='evolution-items'>
             <div className='name'><label>{capitalizeFirstLetter(ev)}</label></div>
-            <div className='image-container'><img className='image' src={ev + '.png'} alt={ev+ ' image'} /></div>
+            <div className='image-container'><img className='image' src={'./pokemons/' + ev + '.png'} alt={ev+ ' image'} /></div>
             </div>
             ))}
             </div> 

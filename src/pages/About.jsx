@@ -53,6 +53,7 @@ return(
                                     {logos.map((info)=>(
                                         <li>
                                             <div style={{display: 'flex', flexDirection: 'row'}}>
+                                            {info.name}
                                             <img 
                                               key={info.name} 
                                               className='logos' 
@@ -60,7 +61,6 @@ return(
                                               alt={info.name}
                                             >
                                             </img>
-                                            {info.name}
                                             </div>
                                         </li>
                                     ))}
