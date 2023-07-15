@@ -11,8 +11,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout/>}>
       <Route index element={<Pokemons />} />
-      <Route path='lau-pokemon-app.netlify.app/about' element={<About />} />
-      <Route path='lau-pokemon-app.netlify.app/contactus' element={<ContactUs />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/contactus' element={<ContactUs />} />
     </Route>
   )
 )
