@@ -11,6 +11,7 @@ export default function Pokemons(){
   const [loading, setLoading] = useState(true);
   const [display, setDisplay] = useState('all');
   const [search, setSearch] = useState('')
+  const [flag, setFlag] = useState(true);
 
   useEffect(()=>{
     setLoading(true);
@@ -23,16 +24,25 @@ export default function Pokemons(){
         setNextPage(res.data.next);
         setPreviousPage(res.data.previous);
         setPokemon(res.data.results);
-    })
+    }).catch((error) => {
+      console.error(error);
+      setLoading(false);
+    });
     return () => cancel();
     }
     if(display == 'search'){
-      axios.get(currentPage +'/' + convertToLowerCase(search)).then(res=>{
+      let cancel;
+      axios.get(currentPage +'/' + convertToLowerCase(search), {
+        cancelToken: new axios.CancelToken(c => cancel = c)
+      }).then(res=>{
         setLoading(false)
         setPokemon(res.data.species);
-      })
+      }).catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
     }
-  }, [currentPage, display])
+  }, [currentPage, display, flag])
 
   function goToNextPage(){
     setCurrentPage(nextPage);
@@ -63,7 +73,10 @@ return (
         </div>
         <div 
           className='icon-container'
-          onClick={()=>setDisplay('search')}
+          onClick={()=> {
+            setDisplay('search');
+            setFlag(!flag);
+        }}
         >
           <img 
             className='search-icon' 
