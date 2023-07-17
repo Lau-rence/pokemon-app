@@ -9,9 +9,12 @@ export default function Pokemons(){
   const [nextPage, setNextPage] = useState();
   const [previousPage, setPreviousPage] = useState();
   const [loading, setLoading] = useState(true);
+  const [display, setDisplay] = useState('all');
+  const [search, setSearch] = useState('')
 
   useEffect(()=>{
     setLoading(true);
+    if(display == 'all'){
     let cancel;
     axios.get(currentPage, {
       cancelToken: new axios.CancelToken(c => cancel = c)
@@ -22,7 +25,14 @@ export default function Pokemons(){
         setPokemon(res.data.results);
     })
     return () => cancel();
-  }, [currentPage])
+    }
+    if(display == 'search'){
+      axios.get(currentPage +'/' + convertToLowerCase(search)).then(res=>{
+        setLoading(false)
+        setPokemon(res.data.species);
+      })
+    }
+  }, [currentPage, display])
 
   function goToNextPage(){
     setCurrentPage(nextPage);
@@ -32,14 +42,44 @@ export default function Pokemons(){
     setCurrentPage(previousPage);
   }
 
+  function convertToLowerCase(inputString) {
+    return inputString.toLowerCase();
+  }
+
 if(loading) return (<div className='loading'><img className='pokeball' src='pokeball.png' alt='pokeball'></img></div>)
 return (
     <>
       <div className='search'>
-        <div className='search-icon-container'><img className='search-icon' src='search.png' alt='search icon'></img></div>
-        <input className='searchbar'type='text' placeholder='Search...'></input>
+        <div
+          className='icon-container' 
+          onClick={()=>setDisplay('all')}
+        >
+          <img 
+            className='refresh-icon' 
+            src='refresh.png' 
+            alt='refresh icon'
+          >
+          </img>
+        </div>
+        <div 
+          className='icon-container'
+          onClick={()=>setDisplay('search')}
+        >
+          <img 
+            className='search-icon' 
+            src='search.png' 
+            alt='search icon'
+          >
+          </img>
+        </div>
+        <input
+          className='searchbar'
+          type='text' 
+          placeholder='Search...'
+          onChange={(e)=> setSearch(e.target.value)}
+        ></input>
       </div> 
-      <PokemonList pokemon={pokemon} />
+      <PokemonList pokemon={pokemon} display={display}/>
       <div className='btn-container'>
         {previousPage && <button onClick={()=>goToPreviousPage()}>Previous</button>}
         {nextPage && <button onClick={()=>goToNextPage()}>Next</button>}
