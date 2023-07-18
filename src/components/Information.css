@@ -35,10 +35,6 @@
     justify-content: center;
 }
 .evolution-items{
-    background-image: url('background-stand2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     height: 100%;
     display: flex;
     flex-direction: column;

@@ -41,7 +41,14 @@ return (
             {loading? <div className='loading'><img className='pokeball' src='pokeball.png' alt='pokeball'></img></div>
             :
             evolution.map((ev)=>(
-            <div className='evolution-items' key={ev}>
+            <div 
+              className='evolution-items' 
+              key={ev} 
+              style={{
+                backgroundImage: `url('background-stand2.png')`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center'}}>
             <div className='name'><label>{capitalizeFirstLetter(ev)}</label></div>
             <div className='image-container'><img className='image' src={'./pokemons/' + ev + '.png'} alt={ev+ ' image'} /></div>
             </div>
