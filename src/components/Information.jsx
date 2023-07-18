@@ -6,7 +6,7 @@ export default function Information({open, onClose, pokemon}){
     const [evolution, setEvolution] = useState([]);
     const [loading, setLoading] = useState(false)
     useEffect(()=>{
-        if(open=true){
+        if(open){
         setLoading(true)
         axios.get(url+pokemon).then((res)=>{
             axios.get(res.data.species.url).then((res)=>{
@@ -41,7 +41,7 @@ return (
             {loading? <div className='loading'><img className='pokeball' src='pokeball.png' alt='pokeball'></img></div>
             :
             evolution.map((ev)=>(
-            <div className='evolution-items'>
+            <div className='evolution-items' key={ev}>
             <div className='name'><label>{capitalizeFirstLetter(ev)}</label></div>
             <div className='image-container'><img className='image' src={'./pokemons/' + ev + '.png'} alt={ev+ ' image'} /></div>
             </div>

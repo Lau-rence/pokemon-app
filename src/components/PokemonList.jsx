@@ -19,7 +19,7 @@ export default function PokemonList({ pokemon, display }) {
         {Array.isArray(pokemon)?(
           display === 'all' ? (
             pokemon.map((p) => (
-              <div className="pokemon-info" onClick={() => {
+              <div className="pokemon-info" key={p.name} onClick={() => {
                 setOpenInfo(true);
                 setPokemonName(p.name);
               }}>

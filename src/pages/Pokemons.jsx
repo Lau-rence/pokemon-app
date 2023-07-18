@@ -12,6 +12,7 @@ export default function Pokemons(){
   const [display, setDisplay] = useState('all');
   const [search, setSearch] = useState('')
   const [flag, setFlag] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(()=>{
     setLoading(true);
@@ -25,20 +26,19 @@ export default function Pokemons(){
         setPreviousPage(res.data.previous);
         setPokemon(res.data.results);
     }).catch((error) => {
-      console.error(error);
       setLoading(false);
     });
     return () => cancel();
     }
-    if(display == 'search'){
+    else if(display == 'search'){
       let cancel;
-      axios.get(currentPage +'/' + convertToLowerCase(search), {
+      axios.get('https://pokeapi.co/api/v2/pokemon/' + convertToLowerCase(search), {
         cancelToken: new axios.CancelToken(c => cancel = c)
       }).then(res=>{
         setLoading(false)
         setPokemon(res.data.species);
       }).catch((error) => {
-        console.error(error);
+        setError(error.response.data);
         setLoading(false);
       });
     }
@@ -62,7 +62,11 @@ return (
       <div className='search'>
         <div
           className='icon-container' 
-          onClick={()=>setDisplay('all')}
+          onClick={()=>{
+            setDisplay('all');
+            setError('');
+          }}
+          
         >
           <img 
             className='refresh-icon' 
@@ -76,6 +80,7 @@ return (
           onClick={()=> {
             setDisplay('search');
             setFlag(!flag);
+            setError('');
         }}
         >
           <img 
@@ -91,11 +96,11 @@ return (
           placeholder='Search...'
           onChange={(e)=> setSearch(e.target.value)}
         ></input>
-      </div> 
-      <PokemonList pokemon={pokemon} display={display}/>
+      </div>
+      {error === '' ? <PokemonList pokemon={pokemon} display={display}/> : <div className='error-container'><p>There is no pokemon with a name '{search}'</p></div>} 
       <div className='btn-container'>
-        {previousPage && <button onClick={()=>goToPreviousPage()}>Previous</button>}
-        {nextPage && <button onClick={()=>goToNextPage()}>Next</button>}
+        {display === 'all'? previousPage && <button onClick={()=>goToPreviousPage()}>Previous</button> : null}
+        {display === 'all'? nextPage && <button onClick={()=>goToNextPage()}>Next</button> : null}
       </div>
     </>
 )
