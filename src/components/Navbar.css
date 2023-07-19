@@ -17,7 +17,7 @@
 
 .logo {
     display: flex;
-    width: 100%;
+    width:max-content;
     padding-left: 2rem;
 }
 
