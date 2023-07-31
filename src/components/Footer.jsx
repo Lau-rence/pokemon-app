@@ -1,3 +1,23 @@
+import { AiFillLinkedin, AiFillFacebook, AiFillGithub } from "react-icons/ai";
+
+const icons = [
+  {
+    name: 'Linkedin',
+    component: <AiFillLinkedin className="icons"/>,
+    link: 'https://www.linkedin.com/in/laurence-santos-478a8a258/'
+  },
+  {
+    name: 'Github',
+    component: <AiFillGithub className="icons"/>,
+    link: 'https://github.com/Lau-rence'
+  },
+  {
+    name: 'Facebook',
+    component: <AiFillFacebook className="icons"/>,
+    link: 'https://www.facebook.com/Lorensssssssssssss'
+  }
+  
+]
 import './Footer.css'
 export default function Footer(){
     return(
@@ -6,9 +26,15 @@ export default function Footer(){
             <p>© Laurence - 2023</p>
           </div>
           <div className='footer-accounts'>
-            <a href='https://www.linkedin.com/in/laurence-santos-478a8a258/' target="_blank"><img className='icons' src='linkedin icon.png' alt='linkedin icon'></img></a>
-            <a href='https://github.com/Lau-rence' target="_blank"><img className='icons' src='github icon2.png' alt='github icon'></img></a>
-            <a href='https://www.facebook.com/Lorensssssssssssss' target="_blank"><img className='icons' src='facebook icon.png' alt='facebook icon'></img></a>
+            {icons.map((icon)=>(
+              <a
+                href={icon.link}
+                target="_blank"
+                key={icon.name}
+              >
+                {icon.component}
+              </a>
+            ))}
           </div>
         </div>
     )

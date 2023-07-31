@@ -78,9 +78,13 @@ return (
         <div 
           className='icon-container'
           onClick={()=> {
-            setDisplay('search');
-            setFlag(!flag);
-            setError('');
+            if(search==''){
+              setError('empty search')
+            } else {
+              setDisplay('search');
+              setFlag(!flag);
+              setError('');
+            }
         }}
         >
           <img 
