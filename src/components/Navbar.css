@@ -8,7 +8,8 @@
     height: max-content;
     padding-bottom: 8px;
     padding-top: 8px;
-    box-shadow: 0 1px 5px black;
+    box-shadow: 0 1px 5px black; /* Ensure the element has a position other than 'static' */
+    z-index: 1; 
 }
 
 .column {

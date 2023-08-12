@@ -32,6 +32,18 @@ export default function Navbar(){
                         setIsMenuOpen(false);
                     }}
                     >
+                    Home
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                    to="/pokemons"
+                    className={activeItem === 'pokemons' ? 'navigation-item-active' : 'navigation-item'}
+                    onClick={() => {
+                        setActiveItem('pokemons');
+                        setIsMenuOpen(false);
+                    }}
+                    >
                     Pokemon List
                     </Link>
                 </li>
@@ -69,40 +81,52 @@ export default function Navbar(){
             )}
             <div className='desktop-menu'>
                 <li>
-                <Link
-                    to="/"
-                    className={activeItem === 'home' ? 'navigation-item-active' : 'navigation-item'}
-                    onClick={() => {
-                    setActiveItem('home');
-                    setIsMenuOpen(false);
-                    }}
-                >
-                    Pokemon List
-                </Link>
+                    <Link
+                        to="/"
+                        className={activeItem === 'home' ? 'navigation-item-active' : 'navigation-item'}
+                        onClick={() => {
+                        setActiveItem('home');
+                        setIsMenuOpen(false);
+                        }}
+                    >
+                        Home
+                    </Link>
                 </li>
                 <li>
-                <Link
-                    to="/about"
-                    className={activeItem === 'about' ? 'navigation-item-active' : 'navigation-item'}
-                    onClick={() => {
-                    setActiveItem('about');
-                    setIsMenuOpen(false);
-                    }}
-                >
-                    About
-                </Link>
+                    <Link
+                        to="/pokemons"
+                        className={activeItem === 'pokemons' ? 'navigation-item-active' : 'navigation-item'}
+                        onClick={() => {
+                        setActiveItem('pokemons');
+                        setIsMenuOpen(false);
+                        }}
+                    >
+                        Pokemon List
+                    </Link>
                 </li>
                 <li>
-                <Link
-                    to="/contactus"
-                    className={activeItem === 'contactus' ? 'navigation-item-active' : 'navigation-item'}
-                    onClick={() => {
-                    setActiveItem('contactus');
-                    setIsMenuOpen(false);
-                    }}
-                >
-                    Contact us
-                </Link>
+                    <Link
+                        to="/about"
+                        className={activeItem === 'about' ? 'navigation-item-active' : 'navigation-item'}
+                        onClick={() => {
+                        setActiveItem('about');
+                        setIsMenuOpen(false);
+                        }}
+                    >
+                        About
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/contactus"
+                        className={activeItem === 'contactus' ? 'navigation-item-active' : 'navigation-item'}
+                        onClick={() => {
+                        setActiveItem('contactus');
+                        setIsMenuOpen(false);
+                        }}
+                    >
+                        Contact us
+                    </Link>
                 </li>
             </div>
             </div>
