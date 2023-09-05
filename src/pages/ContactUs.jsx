@@ -1,5 +1,10 @@
-import { useState } from 'react'
-import './ContactUs.css'
+//Packages
+import { useState } from 'react';
+import axios from 'axios';
+
+//Components & Styles
+import './ContactUs.css';
+
 export default function ContactUs () {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -9,8 +14,16 @@ export default function ContactUs () {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const details = {firstName, lastName, email, subject, message};
-        console.log(details);
+        
+        axios.post('http://localhost:3000/send-email', {
+            firstName: firstName, 
+            lastName: lastName, 
+            email: email, 
+            subject: subject, 
+            message: message
+        }).then(response => {
+            console.log(response.data);
+        })
     }
     return(
         <div className="contactus">
