@@ -1,44 +1,71 @@
 import { useState } from 'react'
 import './ContactUs.css'
 export default function ContactUs () {
-    const [first, setFirst] = useState('');
-    const [last, setLast] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const details = {firstName, lastName, email, subject, message};
+        console.log(details);
+    }
     return(
         <div className="contactus">
             <div className="contactus-bg" style={{backgroundImage: `linear-gradient( to right, #19224f, transparent) , url('pokemon-bg2.jpg')`}}>
                 <h1>Hello, Poké fans!</h1>
                 <p>Want to contact us? Fill the contact form below and click submit.</p>
                 <div className='contactus-container'>
-                    <div className='form'>
+                    <form className='form' onSubmit={handleSubmit}>
                         <h2>Contact Form</h2>
                         <hr/>
                         <div className='form-container'>
                             <label>Name:</label>
                             <div>
-                                <input type='text' placeholder='First name...'/>
-                                <input type='text' placeholder='Last name...'/>
+                                <input 
+                                    required
+                                    type='text' 
+                                    placeholder='First name...'
+                                    onChange={(e)=> setFirstName(e.target.value)}
+                                />
+                                <input 
+                                    required
+                                    type='text' 
+                                    placeholder='Last name...' 
+                                    onChange={(e)=> setLastName(e.target.value)}
+                                />
                             </div>
                             <label>Email:</label>
-                            <input type='email'/>
+                            <input
+                                required
+                                type='email'
+                                onChange={(e)=> setEmail(e.target.value)}
+                            />
                             <label>Subject:</label>
-                            <input type='text'></input>
+                            <input
+                                required
+                                type='text'
+                                onChange={(e)=> setSubject(e.target.value)}
+                            />
                             <label>Message:</label>
-                            <textarea placeholder='Type your message here...'></textarea>
+                            <textarea 
+                                required
+                                placeholder='Type your message here...'
+                                onChange={(e)=> setMessage(e.target.value)}
+                            />
                             <div
                               style={{
-                                display: 'flex', 
+                                  margin: '20px',
+                                  display: 'flex', 
                                 justifyContent: 'center', 
-                                margin: '20px'
                               }}
                             >
                               <button>Submit</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
