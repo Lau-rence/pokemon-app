@@ -15,7 +15,7 @@ export default function ContactUs () {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        axios.post('http://localhost:3000/send-email', {
+        axios.post('https://nodemailer-imko.vercel.app/send-email', {
             firstName: firstName, 
             lastName: lastName, 
             email: email, 
