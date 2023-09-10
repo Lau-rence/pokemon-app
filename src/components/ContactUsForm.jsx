@@ -4,6 +4,7 @@ import axios from 'axios';
 
 //Components & Styles
 import './ContactUs.css';
+import MessageBox from './MessageBox';
 
 const ContactUsForm = () => {
     const [firstName, setFirstName] = useState('');
@@ -11,6 +12,8 @@ const ContactUsForm = () => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [messageAlert, setMessageAlert] = useState('');
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,14 +26,17 @@ const ContactUsForm = () => {
             message: message
         }).then(response => {
             if(response.data == "Email sent successfully"){
-                alert("Message sent successfully!");
+                setMessageAlert("Message sent successfully!");
+                setIsOpen(true);
             }
             else{
-                alert("Failed to send a message!")
+                setMessageAlert("Failed to send a message!")
+                setIsOpen(true);
             }
         })
     }
     return ( 
+        <>
         <div className="contactus">
             <div className="contactus-bg" style={{backgroundImage: `linear-gradient( to right, #19224f, transparent) , url('pokemon-bg2.jpg')`}}>
                 <h1>Hello, Poké fans!</h1>
@@ -87,6 +93,8 @@ const ContactUsForm = () => {
                 </div>
             </div>
         </div>
+        <MessageBox message={messageAlert} isOpen={isOpen} onClose={() => setIsOpen(false)}/>
+        </>
     );
 }
  

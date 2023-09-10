@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AiFillCloseCircle } from 'react-icons/ai'
 import { useEffect, useState } from "react";
 import './Navbar.css'
 export default function Navbar(){
@@ -22,7 +23,7 @@ export default function Navbar(){
             <div id='navigation' className='navigation'>
             {isMenuOpen ? (
                 <ul className='mobile-menu'>
-                <div className='closing-icon'><p onClick={()=>setIsMenuOpen(false)}>x</p></div>
+                <div className='closing-icon'><p onClick={()=>setIsMenuOpen(false)}><AiFillCloseCircle/></p></div>
                 <li>
                     <Link
                     to="/"

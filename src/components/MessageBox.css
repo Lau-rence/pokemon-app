@@ -1,0 +1,32 @@
+.message-box {
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.text-box {
+    background-color: #e27e94;
+    border: none;
+    padding: 10px;
+}
+.text-box div {
+    display: flex;
+    justify-content: end;
+    color: #19224f;
+    font-size: 1.5rem;
+}
+.text-box div svg {
+    cursor: pointer;
+}
+.text-box p {
+    color: #19224f;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
