@@ -7,12 +7,15 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
 }
 .text-box {
+    margin-top: 20px;
     background-color: #e27e94;
     border: none;
     padding: 10px;
+    width: 270px;
+    height: max-content;
+    border-radius: 15px;
 }
 .text-box div {
     display: flex;
