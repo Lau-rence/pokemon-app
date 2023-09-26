@@ -1,0 +1,25 @@
+.home-intro {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.home-intro h1 {
+    color: #fff;
+}
+.home-intro h2 {
+    color: #fff;
+    margin-bottom: 0px;
+}
+.home-intro h4 {
+    color: #fff;
+    margin-top: 0px;
+}
+.home-event {
+    color: #fff;
+}
+
+.home-event img {
+    width: 60%;
+    height: auto;
+}

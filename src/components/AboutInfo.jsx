@@ -33,9 +33,9 @@ const AboutInfo = () => {
             <div className='about-bg' style={{backgroundImage: `linear-gradient( to right, #19224f, transparent) , url('pokemon-bg1.png')`}}>
                 <div className='container-about'>
                     <div className='box'>
-                        <h1>Pokémon Application</h1>
+                        <h1>Pokémon Universe</h1>
                         <div>
-                            <p>This web application is only created for fun. It displays all the pokémons and the evolution of them. The developer started the creation on June 26, 2023, while he was studying front-end development. This is also his first solo web application that he launched.</p>
+                            <p>This web application is only created for fun. It displays some of the events, all the pokémons, and the evolution of them. The developer started the creation on June 26, 2023, while he was studying front-end development. This is also his first solo web application that he launched.</p>
                         </div>
                     </div>
                    

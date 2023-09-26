@@ -1,0 +1,23 @@
+.event-container{
+    display: flex;
+    flex-direction: row;
+}
+.event-slide .carousel .slider-wrapper{
+    width: 100%;
+    height: auto;
+}
+
+.event-slide .carousel{
+   text-align: center;
+}
+
+.event-slide .carousel .thumb {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .event-slide .carousel .slider-wrapper{
+        width: 60%;
+        height: auto;
+    }
+}
