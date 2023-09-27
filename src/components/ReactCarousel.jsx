@@ -7,7 +7,7 @@ import './ReactCarousel.css'
 const ReactCarousel = () => {
     return (
         <>
-            <Carousel className="carousel-slide" autoPlay={true} infiniteLoop={true}>
+            <Carousel className="carousel-slide" autoPlay infiniteLoop interval={3000}>
                 <div>
                     <img src="/carousel/carousel1.png"/>
                 </div>

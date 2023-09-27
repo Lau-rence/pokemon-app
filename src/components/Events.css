@@ -1,23 +1,38 @@
 .event-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .event-slide .carousel .slider-wrapper{
-    width: 100%;
+    width: 50%;
     height: auto;
+    margin: 30px;
 }
 
 .event-slide .carousel{
-   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-content: center;
 }
 
-.event-slide .carousel .thumb {
-    display: none;
+
+.poster {
+    width: 95%;
+    height: auto;
+    border-radius: 0px 500px 500px 0px;
 }
 
 @media only screen and (min-width: 600px) {
     .event-slide .carousel .slider-wrapper{
         width: 60%;
         height: auto;
+    }
+    .event-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .poster {
+        width: 60%;
+        height: auto;
+        border-radius: 0px 500px 500px 0px;
     }
 }

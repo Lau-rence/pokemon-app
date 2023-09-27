@@ -1,25 +1,29 @@
 .home-intro {
     padding-top: 10px;
+    background-image: radial-gradient(closest-side, #5e36ba, #190d35);
+    color: #e27e94;
+    height: 100%;
+
+}
+.home-intro h1 {
+    color: white;
     padding-left: 30px;
     padding-right: 30px;
 }
-
-.home-intro h1 {
-    color: #fff;
-}
 .home-intro h2 {
-    color: #fff;
     margin-bottom: 0px;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .home-intro h4 {
-    color: #fff;
     margin-top: 0px;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px;
 }
-.home-event {
-    color: #fff;
-}
-
-.home-event img {
-    width: 60%;
-    height: auto;
+.home-intro h3 {
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px;
 }

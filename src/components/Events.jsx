@@ -26,8 +26,8 @@ const Events = () => {
         <div className="home-event">
             <h4>Pokécon PH 2023, May 13, 2023.</h4>
             <div className="event-container">
-            <img src={'/carousel/pokecon.jpg'}></img>
-            <Carousel className="event-slide">
+            <img className='poster' src={'/carousel/pokecon.jpg'}></img>
+            <Carousel className="event-slide" showStatus={false} showThumbs={false}>
                 {pokecon.map(info=>(
                     <div>
                         <img src={info.src} />
