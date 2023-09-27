@@ -27,7 +27,7 @@ const Events = () => {
             <h4>Pokécon PH 2023, May 13, 2023.</h4>
             <div className="event-container">
             <img className='poster' src={'/carousel/pokecon.jpg'}></img>
-            <Carousel className="event-slide" showStatus={false} showThumbs={false}>
+            <Carousel className="event-slide" showStatus={false} showThumbs={false} autoPlay interval={3000} infiniteLoop>
                 {pokecon.map(info=>(
                     <div>
                         <img src={info.src} />

@@ -7,23 +7,50 @@
 }
 .home-intro h1 {
     color: white;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .home-intro h2 {
     margin-bottom: 0px;
     color: white;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 80px;
 }
 .home-intro h4 {
     margin-top: 0px;
     font-weight: 400;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .home-intro h3 {
     font-weight: 400;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .home-intro h1 {
+        color: white;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .home-intro h2 {
+        margin-bottom: 0px;
+        color: white;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 80px;
+    }
+    .home-intro h4 {
+        margin-top: 0px;
+        font-weight: 400;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .home-intro h3 {
+        font-weight: 400;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
