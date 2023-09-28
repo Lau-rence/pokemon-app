@@ -23,7 +23,7 @@ export default function Footer(){
     return(
         <div className='footer'>
           <div className='footer-author'>
-            <p>© Laurence - 2023</p>
+            <p>© 2023 Laurence. All Rights Reserved.</p>
           </div>
           <div className='footer-accounts'>
             {icons.map((icon)=>(
